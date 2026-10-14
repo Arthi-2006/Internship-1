@@ -1,0 +1,124 @@
+
+/* Login and Register Pages */
+
+.auth-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #eeedff, #e2f3ff);
+}
+
+.auth-container {
+    width: 100%;
+    min-height: calc(100vh - 75px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 16px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 430px;
+    padding: 32px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.09);
+}
+
+.auth-card h2 {
+    text-align: center;
+    color: #25234a;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.auth-card > p:first-of-type {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.auth-card label {
+    display: block;
+    font-weight: 600;
+    margin: 14px 0 6px;
+}
+
+.auth-card input {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #d5d5e0;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.auth-card input:focus {
+    border-color: #635bff;
+    box-shadow: 0 0 0 3px rgba(99, 91, 255, 0.12);
+}
+
+.auth-card button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 22px;
+    border: none;
+    border-radius: 8px;
+    background: #635bff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.auth-card button:hover {
+    background: #4940db;
+}
+
+.error {
+    display: block;
+    color: #d93025;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.message {
+    margin-top: 14px;
+    text-align: center;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.auth-card .auth-link {
+    margin: 20px 0 0;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
+
+.auth-link a {
+    color: #635bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-link a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    .auth-container {
+        padding: 22px 14px;
+        align-items: flex-start;
+    }
+
+    .auth-card {
+        padding: 24px 18px;
+        border-radius: 12px;
+    }
+
+    .auth-card h2 {
+        font-size: 25px;
+    }
+}

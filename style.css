@@ -1,0 +1,537 @@
+
+/* =================================
+   1. RESET AND GLOBAL STYLES
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f8fc;
+    color: #222;
+    line-height: 1.6;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+/* =================================
+   2. HEADER AND NAVIGATION
+================================= */
+
+header {
+    width: 100%;
+    padding: 16px 5%;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+header h1 {
+    font-size: clamp(23px, 4vw, 30px);
+    color: #635bff;
+    line-height: 1.3;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 18px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #635bff;
+}
+
+/* =================================
+   3. HORIZONTAL LINES
+================================= */
+
+body > hr,
+main > hr {
+    display: none;
+}
+
+/* =================================
+   4. HOME / HERO SECTION
+================================= */
+
+#home {
+    width: 100%;
+    padding: 55px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #eeedff, #e2f3ff);
+}
+
+#home h2 {
+    max-width: 800px;
+    margin: 0 auto 14px;
+    font-size: clamp(27px, 5vw, 44px);
+    line-height: 1.25;
+    color: #25234a;
+}
+
+#home p {
+    max-width: 600px;
+    margin: 0 auto 25px;
+    color: #555;
+    font-size: 16px;
+}
+
+/* =================================
+   5. SEARCH BAR
+================================= */
+
+#home form {
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+#home input[type="search"] {
+    flex: 1;
+    min-width: 0;
+    padding: 13px 15px;
+    border: 1px solid #d7d7e5;
+    border-radius: 9px;
+    background: #fff;
+    outline: none;
+    font-size: 16px;
+}
+
+#home input[type="search"]:focus {
+    border-color: #635bff;
+    box-shadow: 0 0 0 3px rgba(99, 91, 255, 0.12);
+}
+
+#home button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 9px;
+    background: #635bff;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#home button:hover {
+    background: #4940db;
+}
+
+/* =================================
+   6. BLOG SECTION
+================================= */
+
+main {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 35px 20px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+}
+
+main > h2 {
+    grid-column: 1 / -1;
+    font-size: clamp(25px, 4vw, 32px);
+    color: #25234a;
+    line-height: 1.3;
+    margin-bottom: -16px;
+}
+
+main > p {
+    grid-column: 1 / -1;
+    color: #666;
+    margin-bottom: 0;
+}
+
+/* =================================
+   7. BLOG CARDS
+================================= */
+
+article {
+    width: 100%;
+    min-width: 0;
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid #ededf4;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 9px 24px rgba(0, 0, 0, 0.09);
+}
+
+article img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    background: #e9e9f2;
+}
+
+article h3 {
+    padding: 18px 18px 8px;
+    font-size: 20px;
+    line-height: 1.4;
+    color: #25234a;
+    overflow-wrap: anywhere;
+}
+
+article p {
+    padding: 0 18px 15px;
+    font-size: 15px;
+    color: #666;
+    flex-grow: 1;
+    overflow-wrap: anywhere;
+}
+
+article a {
+    display: inline-block;
+    align-self: flex-start;
+    margin: 0 18px 20px;
+    padding: 8px 0;
+    color: #635bff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+article a:hover {
+    text-decoration: underline;
+}
+
+/* =================================
+   8. ABOUT SECTION
+================================= */
+
+#about {
+    width: 100%;
+    padding: 40px 20px;
+    background: #eeedff;
+    text-align: center;
+}
+
+#about h2 {
+    color: #25234a;
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+#about p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #555;
+}
+
+/* =================================
+   9. FOOTER
+================================= */
+
+footer {
+    width: 100%;
+    padding: 25px 15px;
+    background: #25234a;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* =================================
+   10. TABLET RESPONSIVENESS
+================================= */
+
+@media screen and (min-width: 600px) {
+    header {
+        padding: 20px 5%;
+    }
+
+    main {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 40px 25px;
+        gap: 24px;
+    }
+
+    article img {
+        height: 200px;
+    }
+
+    #home {
+        padding: 65px 25px;
+    }
+}
+
+/* =================================
+   11. DESKTOP RESPONSIVENESS
+================================= */
+
+@media screen and (min-width: 950px) {
+    header {
+        padding: 20px 7%;
+    }
+
+    main {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        padding: 45px 30px;
+        gap: 28px;
+    }
+
+    article img {
+        height: 220px;
+    }
+}
+
+/* =================================
+   12. SMALL MOBILE SCREENS
+================================= */
+
+@media screen and (max-width: 599px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 18px 12px;
+        gap: 15px;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    #home {
+        padding: 42px 16px;
+    }
+
+    #home h2 {
+        font-size: 29px;
+    }
+
+    #home p {
+        font-size: 15px;
+    }
+
+    #home form {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    #home input[type="search"],
+    #home button {
+        width: 100%;
+        min-height: 46px;
+    }
+
+    main {
+        padding: 30px 16px;
+        gap: 20px;
+    }
+
+    article {
+        border-radius: 12px;
+    }
+
+    article img {
+        height: 210px;
+    }
+
+    article h3 {
+        font-size: 19px;
+        padding: 16px 16px 8px;
+    }
+
+    article p {
+        padding: 0 16px 12px;
+        font-size: 14px;
+    }
+
+    article a {
+        margin-left: 16px;
+        margin-bottom: 16px;
+    }
+
+    #about {
+        padding: 35px 18px;
+    }
+
+    #about h2 {
+        font-size: 25px;
+    }
+
+    footer {
+        padding: 22px 12px;
+    }
+}
+
+/* =================================
+   13. EXTRA SMALL MOBILE SCREENS
+================================= */
+
+@media screen and (max-width: 360px) {
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    #home h2 {
+        font-size: 25px;
+    }
+
+    main {
+        padding: 25px 12px;
+    }
+
+    article img {
+        height: 175px;
+    }
+
+    article h3 {
+        font-size: 18px;
+    }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}
+
+/* Read More Popup */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.65);
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    overflow-y: auto;
+}
+
+.modal-content {
+    position: relative;
+    background: white;
+    width: 100%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 25px;
+    border-radius: 16px;
+    animation: popup 0.25s ease;
+}
+
+.modal-content h2 {
+    color: #25234a;
+    font-size: 25px;
+    padding-right: 30px;
+    margin-bottom: 18px;
+}
+
+.modal-content img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 18px;
+}
+
+.modal-content p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    background: #eeedff;
+    color: #635bff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+@keyframes popup {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .modal-content {
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    .modal-content h2 {
+        font-size: 21px;
+    }
+
+    .modal-content img {
+        max-height: 220px;
+    }
+}
